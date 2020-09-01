@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Roboto:wght@400;700&display=swap');
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a, a:visited{
+    text-decoration:none;
+    color:inherit;
+}
+
+svg{
+    transition:1s;
+}
+
+button{
+    border:none;
+    outline: none;
+    background: none; 
+    transition:0.6s;
+}
+.icon:hover{
+    transform:scale(1.15)
+}
+.icon{
+    height: 20px;
+    width:20px; 
+    transition:1s;
+}
+
+
