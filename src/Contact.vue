@@ -14,11 +14,11 @@
                   <span class="item_value">{{info.value}}</span>
                 </div>
                 <div>
-                  <button :disabled="somethingisChanging" @click="edit(info,index)">
+                  <button :disabled="somethingChanging" @click="edit(info,index)">
                     <Edit />
                   </button>
                   <button
-                    :disabled="somethingisChanging"
+                    :disabled="somethingChanging"
                     @click="requireConfirm(info.key,'deleteInfo')"
                   >
                     <Bin />
@@ -44,20 +44,20 @@
           <div class="info-input">
             <input placeholder="key" v-model="keyInput" class="key_input" />
             <input placeholder="value" v-model="valueInput" class="value_input" />
-            <button :disabled="somethingisChanging" @click="addInfo">
+            <button :disabled="somethingChanging" @click="addInfo">
               <Add />
             </button>
           </div>
           <div class="steps_buttons">
-            <button :disabled="somethingisChanging" @click="undo">
+            <button :disabled="somethingChanging" @click="undo">
               <Undo />
             </button>
-            <button :disabled="somethingisChanging" @click="redo">
+            <button :disabled="somethingChanging" @click="redo">
               <Redo />
             </button>
           </div>
         </template>
-        <div v-show="!somethingisChanging" style="width:2rem">
+        <div v-show="!somethingChanging" style="width:2rem">
           <router-link :to="{name:'phone_book'}">back</router-link>
         </div>
       </div>
@@ -93,8 +93,8 @@ export default {
     this.localContact = this.$store.getters.getContact(this.index);
   },
   computed: {
-    somethingisChanging: function () {
-      return this.$store.state.somethingisChanging;
+    somethingChanging: function () {
+      return this.$store.state.somethingChanging;
     },
   },
   props: ["index"],
